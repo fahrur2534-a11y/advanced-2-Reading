@@ -1,127 +1,375 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About My Family - Writing Exercise</title>
+
+<title>Advanced Reading Task - Environmental Challenges</title>
 
 <style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    background:#f4f6f9;
+  font-family:Arial, sans-serif;
+  background:#f4f7fb;
+  padding:20px;
+  color:#333;
+  line-height:1.6;
 }
 
 .container{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
+  max-width:1200px;
+  margin:auto;
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
-h1,h2{
-    color:#2c3e50;
+h1{
+  text-align:center;
+  color:#2c3e50;
+  margin-bottom:10px;
 }
 
-textarea{
-    width:100%;
-    min-height:120px;
-    padding:10px;
-    margin-top:10px;
+.subtitle{
+  text-align:center;
+  color:#666;
+  margin-bottom:20px;
 }
 
-input{
-    padding:8px;
-    margin:5px;
+.instructions{
+  background:#eef6ff;
+  border-left:5px solid #3498db;
+  padding:15px;
+  border-radius:8px;
+  margin-bottom:20px;
+}
+
+.text-box{
+  background:#fafafa;
+  padding:20px;
+  border-radius:8px;
+  margin-bottom:30px;
+}
+
+.question{
+  background:#fafafa;
+  padding:15px;
+  margin-bottom:15px;
+  border-radius:8px;
+}
+
+.question p{
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+label{
+  display:block;
+  margin:6px 0;
+  cursor:pointer;
+}
+
+input[type="radio"]{
+  margin-right:8px;
 }
 
 button{
-    background:#3498db;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:5px;
-    cursor:pointer;
+  width:100%;
+  padding:15px;
+  background:#3498db;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+  margin-top:20px;
 }
 
 button:hover{
-    background:#2980b9;
+  background:#2980b9;
+}
+
+#result{
+  margin-top:25px;
+  text-align:center;
+  font-size:24px;
+  font-weight:bold;
 }
 
 .correct{
-    color:green;
-    font-weight:bold;
+  color:green;
 }
 
 .wrong{
-    color:red;
-    font-weight:bold;
+  color:red;
 }
+
+.answer-key{
+  margin-top:40px;
+  background:#f9f9f9;
+  padding:20px;
+  border-radius:10px;
+}
+
+.answer-key h2{
+  margin-bottom:15px;
+}
+
+.answer-key ol{
+  margin-left:20px;
+}
+
+.answer-key li{
+  margin-bottom:6px;
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
-<hr>
+<h1>ADVANCED READING TASK</h1>
 
-<h2>Part A: Fill in the blanks</h2>
+<div class="subtitle">
+Global Environmental Challenges
+</div>
 
-<p>1. Kelly lives in
-<input id="q1"></p>
+<div class="instructions">
+<strong>Instruction:</strong><br>
+Read the text carefully and answer all questions below.
+</div>
 
-<p>2. Kelly's mother's name is
-<input id="q2"></p>
+<div class="text-box">
 
-<p>3. Kelly's father works in a
-<input id="q3"></p>
+<h2>Text</h2>
 
-<p>4. Kelly's sister loves listening to
-<input id="q4"></p>
+<p>Global environmental challenges have become one of the most serious issues in the modern world. Problems such as climate change, air pollution, deforestation, and plastic waste continue to increase due to human activities.</p>
 
-<p>5. Brandy is a pet
-<input id="q5"></p>
+<p>Climate change is mainly caused by greenhouse gases such as carbon dioxide. These gases trap heat in the atmosphere and lead to rising global temperatures.</p>
 
-<button onclick="checkAnswers()">Check Answers</button>
+<p>Air pollution is mostly caused by vehicle emissions and industrial activities. It can lead to respiratory diseases.</p>
 
-<p id="result"></p>
+<p>Deforestation reduces oxygen production and destroys habitats for many species.</p>
 
-<hr>
+<p>Plastic waste remains in the environment for hundreds of years and harms marine life.</p>
 
-<h2>Part B: Write About Your Family</h2>
+<p>Solutions include renewable energy, recycling, planting trees, and environmental education.</p>
 
-<p>Write 5–8 sentences about your family.</p>
+</div>
 
-<textarea placeholder="My name is..."></textarea>
+<form id="quizForm">
+
+<h2>Multiple Choice</h2>
+
+<div class="question">
+<p>1. What is the main topic of the text?</p>
+<label><input type="radio" name="q1" value="B"> B. Environmental problems</label>
+<label><input type="radio" name="q1" value="A"> A. Technology development</label>
+<label><input type="radio" name="q1" value="C"> C. School education</label>
+<label><input type="radio" name="q1" value="D"> D. Transportation systems</label>
+</div>
+
+<div class="question">
+<p>2. Which is NOT mentioned as an environmental problem?</p>
+<label><input type="radio" name="q2" value="A"> A. Climate change</label>
+<label><input type="radio" name="q2" value="B"> B. Air pollution</label>
+<label><input type="radio" name="q2" value="C"> C. Water tourism</label>
+<label><input type="radio" name="q2" value="D"> D. Deforestation</label>
+</div>
+
+<div class="question">
+<p>3. What causes climate change mainly?</p>
+<label><input type="radio" name="q3" value="A"> A. Solar energy</label>
+<label><input type="radio" name="q3" value="B"> B. Greenhouse gases</label>
+<label><input type="radio" name="q3" value="C"> C. Ocean waves</label>
+<label><input type="radio" name="q3" value="D"> D. Wind energy</label>
+</div>
+
+<div class="question">
+<p>4. What do greenhouse gases do?</p>
+<label><input type="radio" name="q4" value="A"> A. Cool the Earth</label>
+<label><input type="radio" name="q4" value="B"> B. Trap heat</label>
+<label><input type="radio" name="q4" value="C"> C. Stop pollution</label>
+<label><input type="radio" name="q4" value="D"> D. Create oxygen</label>
+</div>
+
+<div class="question">
+<p>5. What is one result of climate change?</p>
+<label><input type="radio" name="q5" value="A"> A. Earthquakes</label>
+<label><input type="radio" name="q5" value="B"> B. Extreme weather</label>
+<label><input type="radio" name="q5" value="C"> C. Better air quality</label>
+<label><input type="radio" name="q5" value="D"> D. Less rain everywhere</label>
+</div>
+
+<div class="question">
+<p>6. Air pollution is mostly caused by…</p>
+<label><input type="radio" name="q6" value="A"> A. Plants</label>
+<label><input type="radio" name="q6" value="B"> B. Vehicle emissions</label>
+<label><input type="radio" name="q6" value="C"> C. Rainfall</label>
+<label><input type="radio" name="q6" value="D"> D. Forest growth</label>
+</div>
+
+<div class="question">
+<p>7. What disease is linked to air pollution?</p>
+<label><input type="radio" name="q7" value="A"> A. Diabetes</label>
+<label><input type="radio" name="q7" value="B"> B. Respiratory diseases</label>
+<label><input type="radio" name="q7" value="C"> C. Skin allergy only</label>
+<label><input type="radio" name="q7" value="D"> D. Eye color change</label>
+</div>
+
+<div class="question">
+<p>8. Why is deforestation harmful?</p>
+<label><input type="radio" name="q8" value="A"> A. It increases oxygen</label>
+<label><input type="radio" name="q8" value="B"> B. It destroys habitats</label>
+<label><input type="radio" name="q8" value="C"> C. It cools the planet</label>
+<label><input type="radio" name="q8" value="D"> D. It improves biodiversity</label>
+</div>
+
+<div class="question">
+<p>9. What happens when biodiversity decreases?</p>
+<label><input type="radio" name="q9" value="A"> A. More species appear</label>
+<label><input type="radio" name="q9" value="B"> B. Fewer species survive</label>
+<label><input type="radio" name="q9" value="C"> C. More forests grow</label>
+<label><input type="radio" name="q9" value="D"> D. Oceans become cleaner</label>
+</div>
+
+<div class="question">
+<p>10. Why is plastic waste a problem?</p>
+<label><input type="radio" name="q10" value="A"> A. It disappears quickly</label>
+<label><input type="radio" name="q10" value="B"> B. It is biodegradable</label>
+<label><input type="radio" name="q10" value="C"> C. It lasts for hundreds of years</label>
+<label><input type="radio" name="q10" value="D"> D. It turns into food</label>
+</div>
+
+<div class="question">
+<p>11. What does plastic waste affect most?</p>
+<label><input type="radio" name="q11" value="A"> A. Mountains</label>
+<label><input type="radio" name="q11" value="B"> B. Marine life</label>
+<label><input type="radio" name="q11" value="C"> C. Clouds</label>
+<label><input type="radio" name="q11" value="D"> D. Deserts</label>
+</div>
+
+<div class="question">
+<p>12. Which solution is mentioned in the text?</p>
+<label><input type="radio" name="q12" value="A"> A. Increasing pollution</label>
+<label><input type="radio" name="q12" value="B"> B. Cutting more trees</label>
+<label><input type="radio" name="q12" value="C"> C. Using renewable energy</label>
+<label><input type="radio" name="q12" value="D"> D. Ignoring problems</label>
+</div>
+
+<div class="question">
+<p>13. What role does education play?</p>
+<label><input type="radio" name="q13" value="A"> A. Increases pollution</label>
+<label><input type="radio" name="q13" value="B"> B. Encourages sustainability</label>
+<label><input type="radio" name="q13" value="C"> C. Reduces learning</label>
+<label><input type="radio" name="q13" value="D"> D. Stops recycling</label>
+</div>
+
+<div class="question">
+<p>14. What do experts believe?</p>
+<label><input type="radio" name="q14" value="A"> A. Problems cannot be solved</label>
+<label><input type="radio" name="q14" value="B"> B. Collective action can help</label>
+<label><input type="radio" name="q14" value="C"> C. Environment is not important</label>
+<label><input type="radio" name="q14" value="D"> D. Technology causes no harm</label>
+</div>
+
+<div class="question">
+<p>15. What is the conclusion of the text?</p>
+<label><input type="radio" name="q15" value="A"> A. Humans cannot change anything</label>
+<label><input type="radio" name="q15" value="B"> B. Environmental problems are not serious</label>
+<label><input type="radio" name="q15" value="C"> C. Responsible action can protect the planet</label>
+<label><input type="radio" name="q15" value="D"> D. Only governments can solve problems</label>
+</div>
+
+<button type="button" onclick="checkAnswers()">Submit Answers</button>
+
+</form>
+
+<div id="result"></div>
+
+<div class="answer-key">
+
+<h2>Answer Key</h2>
+
+<ol>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+<li>B</li>
+<li>B</li>
+<li>B</li>
+<li>B</li>
+<li>B</li>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+<li>B</li>
+<li>C</li>
+</ol>
+
+</div>
 
 </div>
 
 <script>
+
 function checkAnswers(){
 
-let score = 0;
-
 const answers = {
-q1:"california",
-q2:"carmen",
-q3:"bank",
-q4:"music",
-q5:"dog"
+q1:"B",
+q2:"C",
+q3:"B",
+q4:"B",
+q5:"B",
+q6:"B",
+q7:"B",
+q8:"B",
+q9:"B",
+q10:"C",
+q11:"B",
+q12:"C",
+q13:"B",
+q14:"B",
+q15:"C"
 };
 
-for(let id in answers){
-let user = document.getElementById(id).value.trim().toLowerCase();
+let score = 0;
+let total = 15;
 
-if(user === answers[id]){
+for(let key in answers){
+
+const selected = document.querySelector(`input[name="${key}"]:checked`);
+
+if(selected && selected.value === answers[key]){
 score++;
 }
+
 }
 
-document.getElementById("result").innerHTML =
-"You got " + score + " out of 5 correct!";
+const result = document.getElementById("result");
+const percent = Math.round((score/total)*100);
+
+result.innerHTML = `Score: ${score} / ${total} (${percent}%)`;
+
+if(score >= 12){
+result.className = "correct";
+}else{
+result.className = "wrong";
 }
+
+}
+
 </script>
 
 </body>
